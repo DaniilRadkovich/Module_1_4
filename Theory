@@ -1,0 +1,34 @@
+Теория:
+
+Шилдт:
+Chapters 11, 28
+Статьи:
+https://habr.com/post/164487/
+https://habr.com/post/352374/
+https://habr.com/ru/articles/319036/
+Видео:
+https://youtu.be/zxZ0BXlTys0
+https://youtu.be/O2QwNjkBXNk
+https://youtu.be/mf4lC6TpclM
+https://youtu.be/6Oo-9Can3H8?si=mGo_aaSxgSw72caA
+https://youtu.be/sIkG0X4fqs4?si=ubL3jY4Mff6WCuYj
+https://youtu.be/Dma_NmOrp1c?si=qZ8To4QIhsNUmHJp
+https://youtu.be/hqR41XVx3kM?si=IgY22lhqlQC5IA_m
+
+Практика:
+
+Дан класс:
+public class Foo {
+  public void first() { print("first"); }
+  public void second() { print("second"); }
+  public void third() { print("third"); }
+}
+
+Один и тот же экземпляр данного класса будет вызван 3мя разными потоками.
+Поток А - будет вызывать метод first(). Поток B - second(). Поток С - third().
+Необходимо реализовать механизм и изменить программу таким образом, что методы класса Foo будут вызваны в правильном порядке.
+
+
+Пример:
+Вывод: "firstsecondthird"
+Мы не знаем, в каком порядке будут вызваны методы, но должны гарантировать порядок.
